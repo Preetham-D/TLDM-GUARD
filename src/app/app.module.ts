@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpModule} from '@angular/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import{AppRoutingModule, routingComponents} from './app-routing.module';
@@ -16,6 +17,7 @@ import { DisplaydataComponent } from './displaydata/displaydata.component'
 import { ProjectService } from './project.service';
 import { TokenParams } from './Classes/TokenParams';
 import { SignupComponent } from './signup/signup.component';
+import { MaterialModule } from './materialmodule';
 
 const routes: Routes = [
 
@@ -37,11 +39,13 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    MaterialModule
 
   ],
   exports : [RouterModule],

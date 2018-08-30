@@ -48,11 +48,13 @@ export class ProjectService {
 
   getUsers() : Observable<UserModel[]>{
      var HeadersForUser = new HttpHeaders({
-      'Content-Type':'application/json',
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.AccessToken}`
     });
-      if(this.AccessToken){
-        HeadersForUser.append('Authorization','Bearer' + this.AccessToken)
-      }
+    console.log(this.AccessToken);
+    console.log(HeadersForUser.append('Authorization','Bearer ' + this.AccessToken))
+        //HeadersForUser.append('Authorization','Bearer ' + this.AccessToken)
+
       return this.http.get<UserModel[]>(this.UsersApi, {headers : HeadersForUser});
   }
 }
