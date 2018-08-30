@@ -1,0 +1,77 @@
+
+<html>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <div class="container">
+    <div class="row">
+      <div class="page-header">
+        <h1>SignUp with TL:DM</h1>
+      </div>
+      <form class="form-horizontal" role="form" method="post" action="#">
+
+        <div class="form-group">
+          <label for="firstName" class="col-sm-2 control-label">First Name:</label>
+          <div class="col-sm-6">
+            <input type="text" name="FirstName" class="form-control" id="firstName" placeholder="First Name" [(ngModel)]="signUpModel.FirstName">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName" class="col-sm-2 control-label">Last Name:</label>
+          <div class="col-sm-6">
+            <input type="text" name="LastName" class="form-control" id="lastName" placeholder="Last Name" [(ngModel)]= "signUpModel.LastName">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName" class="col-sm-2 control-label">Email:</label>
+          <div class="col-sm-6">
+            <input type="text" name="Email" class="form-control" id="email" placeholder="Email" [(ngModel)]= "signUpModel.Email">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName" class="col-sm-2 control-label">Password:</label>
+          <div class="col-sm-6">
+            <input type="text" name="Password" class="form-control" id="Password" placeholder="Password" [(ngModel)] ="signUpModel.Password">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName" class="col-sm-2 control-label">Designation:</label>
+          <div class="col-sm-6">
+            <input type="text" name="Designation" class="form-control" id="Designation" placeholder="Designation" [(ngModel)]= "signUpModel.Designation">
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="userName" class="col-sm-2 control-label">Workspace:</label>
+          <div class="col-sm-6">
+            <input type="text" name="Workspace" class="form-control" id="Workspace" placeholder="Workspace" [(ngModel)]= "signUpModel.Workspace" >
+          </div>
+        </div>
+
+
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" id="register">Register</button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+    <!-- end for class "row" -->
+  </div>
+  <!-- end for class "container" -->
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="js/registration-form-with-bootstarp.js"></script>
+  </html>
