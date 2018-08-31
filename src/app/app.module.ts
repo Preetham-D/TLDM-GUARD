@@ -18,7 +18,9 @@ import { ProjectService } from './project.service';
 import { TokenParams } from './Classes/TokenParams';
 import { SignupComponent } from './signup/signup.component';
 import { MaterialModule } from './materialmodule';
-
+// import { PageNotFoundComponent } from './page-not-found.component';
+import {AuthGuard} from './auth.guard'
+import { AuthService } from './auth.service';
 const routes: Routes = [
 
   { path: 'getStarted', component: HomeComponentComponent },
@@ -35,7 +37,8 @@ const routes: Routes = [
     UserDetailsComponent,
     TokenComponent,
     DisplaydataComponent,
-    SignupComponent
+    SignupComponent,
+    // PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,7 @@ const routes: Routes = [
 
   ],
   exports : [RouterModule],
-  providers: [ProjectService, TokenParams],
+  providers: [ProjectService, TokenParams,AuthGuard,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,6 +7,10 @@ import { HttpClient } from '@angular/common/http';
 import{TokenParams} from './Classes/TokenParams';
 import { headersToString } from 'selenium-webdriver/http';
 
+interface myData {
+  success : boolean,
+  message : string
+}
 
 const httpOptions ={
   headers: new HttpHeaders({
@@ -34,7 +38,7 @@ export class ProjectService {
 
   sendMail(email: any){
     console.log(`"${email}"`);
-    return this.http.post(this._url2,email , httpOptions);
+    return this.http.post<myData>(this._url2,email , httpOptions);
   }
 
   sendOTP(OTP: string){
