@@ -1,0 +1,36 @@
+/* .mat-raised-button2{
+  width: 100px;
+  height: 30px;
+ margin-top: 10px;
+  align-content: flex-end;
+}
+
+.mat-raised-button1{
+  width: 100px;
+  height: 30px;
+  padding-top: 200px;
+  padding-right: 30px;
+  float: right;
+
+}
+
+.logingrid {
+  align-content: flex-end;
+}
+
+.getStart{
+
+  align-self: auto;
+}
+
+.mat-grid-tile .mat-figure{
+
+  right: 0;
+  bottom: 0;
+  position:absolute
+
+} */
+.login{
+
+  float: right;
+}

@@ -11,7 +11,7 @@ import{TokenParams} from '../Classes/TokenParams'
 export class LoginComponent implements OnInit {
 
   tokenparam:TokenParams;
-  loginModel = new LoginViewModel('','')
+  loginModel = new LoginViewModel('','','')
   constructor(private _loginservice : ProjectService, private router: Router) { }
 
    users = [];

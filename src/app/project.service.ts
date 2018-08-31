@@ -20,8 +20,10 @@ const httpOptions ={
 export class ProjectService {
   private TokenApi: string = "http://172.23.238.206:5000/api/onboard/login";
   private  UsersApi :  string = "http://172.23.238.206:5000/api/users";
+  private SignupApi: string = "http://172.23.238.206:5000/api/onboard/signup";
   private _url2: string = "http://172.23.238.162:8000/api/users";
   private _url3: string = "http://172.23.238.162:8000/api/users/verify";
+
   AccessToken : string = "";
   constructor(public http : HttpClient) { }
 
@@ -30,9 +32,9 @@ export class ProjectService {
     return this.http.post(this._url2, email);
   }
 
-  sendMail(email: string){
+  sendMail(email: any){
     console.log(`"${email}"`);
-    return this.http.post(this._url2,`"${email}"` , httpOptions);
+    return this.http.post(this._url2,email , httpOptions);
   }
 
   sendOTP(OTP: string){
@@ -56,6 +58,10 @@ export class ProjectService {
         //HeadersForUser.append('Authorization','Bearer ' + this.AccessToken)
 
       return this.http.get<UserModel[]>(this.UsersApi, {headers : HeadersForUser});
+  }
+
+  PostDataBySignUp(signup : UserModel ){
+    return this.http.post(this.SignupApi,signup, httpOptions);
   }
 }
 

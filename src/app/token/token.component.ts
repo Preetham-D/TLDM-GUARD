@@ -9,7 +9,7 @@ import { User } from '../Model';
 })
 export class TokenComponent implements OnInit {
 
-  OTPmodel = new User(null,'','')
+  OTPmodel = new User('','','')
   constructor(private _emailservice: ProjectService, private router: Router) { }
 
   ngOnInit() {
